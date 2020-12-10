@@ -11,6 +11,8 @@ body{
 
 }
 
+
+
 .main{
     min-height: 100vh;
     width: 100%;
@@ -19,8 +21,68 @@ body{
     background-color:white;
 }
 
+.main > .main-content{
+    width: 65%;
+    float: left;
+    display: inline;
+}
+
+.side-panel{
+    margin-top: 30px;
+    width: 29%;
+    min-height: 600px;
+    z-index: 2;
+    position: relative;
+    background-color: #e5e5e5;
+    float: right;
+    padding: 30px;
+    font-size: 14pt;
+}
+
+.side-panel > .side-panel-title{
+    margin-bottom: 20px;
+}
+
+.side-panel > .desc{
+    font-size: 10pt;
+    margin-bottom: 10px;
+}
+.side-panel > .desc >.stars{
+    color: green;
+    font-size: 11pt;
+}
+
+.side-panel >.side-panel-img{
+   width: 100%;
+}
+.side-panel> .operating-systems-title ,.minimum-req-title{
+    margin:10px 0px;
+    font-size: 11pt;
+}
+
+.side-panel > .operating-systems,.minimum-req{
+    font-size: 9pt;
+  
+}
+
+.side-panel > .windows-versions{
+    margin-top: 10px;
+    width: 100%;
+}
+ .windows-versions > .windows-img{
+    max-width: 30px;
+    margin-right: 5px;
+    
+    
+}
+
 .header{
+    font-size: 16pt;
     background-color: #3399ff;
+    color: white;
+}
+.header> span{
+    font-weight: 300;
 }
 
 .divider{
@@ -41,9 +103,11 @@ body{
 }
 
 .top-header,.header > p{
-    color: white;
-    font-weight: bold;
-   
+    color: white;  
+}
+
+.bold{
+    font-weight: 600;
 }
 
 .header{
@@ -99,12 +163,12 @@ body{
 .content{
    margin-bottom: 20px;
     font-weight: 300;
-    max-width: 60%;
+    max-width: 100%;
     font-size: 11pt;
     line-height: 20px;
 }
 
-.content > a:visited {
+a:visited {
     color: #0000EE;
 }
 
@@ -123,6 +187,7 @@ body{
     width: 100%;
 }
 .download-now >.download-btn-wrap>.download-btn {
+    cursor: pointer;
     border: none;
     outline: none;
     width: 300px;
@@ -141,8 +206,6 @@ body{
     margin: 0;
 }
 
-
-
   .attribute ,.spec{
     margin-bottom: 10px;
     font-size: 11pt;
@@ -155,5 +218,10 @@ body{
     font-weight: 300px;   
 }
 
+.how-to-fix > .ways{
+    list-style: none;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
     
 

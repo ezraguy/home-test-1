@@ -106,7 +106,7 @@
         </div>
         <div class="form">
             
-            <div id="form" onsubmit="return validateForm(event)" >
+            <div id="form"  >
                 <div class="input-wrap">
                     <label for="name">Name:<span class="must">*</span></label>
                     
@@ -126,7 +126,7 @@
                 <br>
                 
                 <div class="submit-btn-wrap">
-                    <button type="submit" class="submit-btn green-btn " >Submit</button>
+                    <button type="submit" class="submit-btn green-btn " onclick=validateForm(event) >Submit</button>
                     <span id="success-msg">Form has been sent!</span>
                     <span class="mandatory-msg">*mandatory fields</span>
                 </div>

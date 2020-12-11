@@ -11,18 +11,17 @@ function handleScroll() {
 }
 
 
-function validateForm(e) {
-    e.preventDefault();
-    var inputs = document.getElementById('form').elements;
+function validateForm() {
+    var inputs = document.getElementsByTagName('input');
+    var textarea = document.getElementById('message');
     var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     var emailErrorMessage = document.getElementById('email-err-msg');
     var canSubmit = true;
+
     for (var i = 0; i < inputs.length; i++) {
-        if (i === 3)
-            continue
         var element = inputs[i];
         if (element.value.length === 0) {
-            element.className = 'empty-input';
+            element.className = ' empty-input ';
             canSubmit = false;
         }
         else
@@ -40,6 +39,11 @@ function validateForm(e) {
 
         }
     }
+
+    if (textarea.value.length === 0)
+        textarea.className = 'empty-input ';
+    else
+        textarea.className = '';
 
     if (canSubmit)
         document.getElementById('success-msg').style.display = 'block'

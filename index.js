@@ -1,6 +1,9 @@
 
 function addFixedClass() {
-    window.addEventListener('scroll', handleScroll);
+    if (window.addEventListener)
+        window.addEventListener("scroll", handleScroll, false);
+    else
+        window.attachEvent("scroll", handleScroll);
 }
 
 function handleScroll() {

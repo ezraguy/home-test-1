@@ -6,7 +6,7 @@ function addFixedClass() {
 function handleScroll() {
     var sidePanel = document.getElementById('side-pan');
 
-    if (pageYOffset >= 270)
+    if (document.documentElement.scrollTop >= 270)
         sidePanel.className = ' side-panel fixed ';
     else
         sidePanel.className = ' side-panel '

@@ -3,9 +3,9 @@ function addFixedClass() {
     const sidePanel = document.getElementById('side-pan');
     window.addEventListener('scroll', function () {
         if (pageYOffset >= 270)
-            sidePanel.classList = 'side-panel fixed'
+            sidePanel.className = 'side-panel fixed ';
         else
-            sidePanel.classList = 'side-panel'
+            sidePanel.className = 'side-panel'
     })
 }
 
@@ -19,11 +19,11 @@ function validateForm(e) {
     for (let i = 0; i < inputs.length; i++) {
         const element = inputs[i];
         if (element.value.length === 0) {
-            element.classList.add('empty-input');
+            element.className = 'empty-input';
             canSubmit = false;
         }
         else
-            element.classList.remove('empty-input');
+            element.className = 'empty-input';
 
         if (i === 1) {
 

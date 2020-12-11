@@ -54,10 +54,12 @@ function validateForm() {
 
 }
 
-// ie 8 support
-window.onload = new function () {
+function init() {
     if (window.addEventListener)
-        window.addEventListener("scroll", handleScroll('chrome'));
-    else
-        window.attachEvent("scroll", handleScroll('ie'));
-};
+        window.addEventListener("scroll", handleScroll);
+    else {
+        if (window.attachEvent)
+            window.attachEvent("scroll", handleScroll);
+    }
+}
+init();

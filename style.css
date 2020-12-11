@@ -205,12 +205,7 @@ a:visited {
     min-height: 100px;
 }
 .download-now >.download-btn-wrap>.download-btn {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    padding: 0px 20px;
-    background-color: #33cc33;
-    color: white;
+ 
    min-height: 60px;
     font-size: 25pt;
     border-radius: 2px;

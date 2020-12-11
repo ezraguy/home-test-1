@@ -10,7 +10,7 @@ const addFixedClass = () => {
 
 
 const validateForm = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     const inputs = document.getElementById('form').elements;
     const emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;

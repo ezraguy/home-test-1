@@ -1,5 +1,4 @@
 
-
 const addFixedClass = () => {
     const sidePanel = document.getElementById('side-pan');
     window.addEventListener('scroll', () => {
@@ -45,4 +44,5 @@ const validateForm = (e) => {
 }
 
 
-addFixedClass();
+
+window.onload = addFixedClass();

@@ -6,7 +6,7 @@ function handleScroll() {
     if (document.documentElement.scrollTop >= 270)
         sidePanel.className = ' side-panel fixed ';
     else
-        sidePanel.className = ' side-panel '
+        sidePanel.className = ' side-panel ';
 
 }
 
@@ -58,5 +58,11 @@ window.onload = new function () {
     if (window.addEventListener)
         window.addEventListener("scroll", handleScroll);
     else
-        window.attachEvent("scroll", handleScroll);
+        window.attachEvent("scroll", function () {
+            var sidePanel = document.getElementById('side-pan');
+            if (document.documentElement.scrollTop >= 270)
+                sidePanel.className = ' side-panel fixed ';
+            else
+                sidePanel.className = ' side-panel ';
+        });
 };

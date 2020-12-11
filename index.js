@@ -1,12 +1,13 @@
 
 
 
-function handleScroll() {
+function handleScroll(browser) {
+    console.log(browser);
     var sidePanel = document.getElementById('side-pan');
     if (document.documentElement.scrollTop >= 270)
         sidePanel.className = ' side-panel fixed ';
     else
-        sidePanel.className = ' side-panel ';
+        sidePanel.className = ' side-panel '
 
 }
 
@@ -56,13 +57,7 @@ function validateForm() {
 // ie 8 support
 window.onload = new function () {
     if (window.addEventListener)
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll('chrome'));
     else
-
-        var sidePanel = document.getElementById('side-pan');
-    if (document.documentElement.scrollTop >= 270)
-        sidePanel.className = ' side-panel fixed ';
-    else
-        sidePanel.className = ' side-panel ';
-
+        window.attachEvent("scroll", handleScroll('ie'));
 };

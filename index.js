@@ -1,7 +1,7 @@
 
 function addFixedClass() {
     var sidePanel = document.getElementById('side-pan');
-    window.addEventListener('scroll', function () {
+    window.body.addEventListener('scroll', function () {
         if (pageYOffset >= 270)
             sidePanel.className = ' side-panel fixed ';
         else

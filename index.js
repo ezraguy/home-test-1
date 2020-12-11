@@ -49,8 +49,3 @@ function validateForm(e) {
         document.getElementById('success-msg').style.display = 'block'
 
 }
-
-
-// IE8 support
-
-window.onload(handleScroll());

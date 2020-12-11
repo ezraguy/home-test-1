@@ -11,6 +11,17 @@ body{
 
 }
 
+.green-btn{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0px 20px;
+    background-color: #33cc33;
+    color: white;
+    min-height: 30px;
+    font-size: 14pt;
+}
+
 .fixed{
     position: fixed !important;
     margin-left: auto;
@@ -233,4 +244,55 @@ a:visited {
     font-weight: 300;
 }
     
+form{
+    width: 100%;
+   margin-bottom: 100px;
+    min-height: 200px;
+    padding-right: 10%;
+    
+}
 
+form >.input-wrap{
+    width: 100%;
+    height: 30px;
+}
+
+form> .input-wrap>label {
+    float: left;
+    margin-right: 20px;
+}
+form  >.input-wrap> label> .must{
+    color: red;
+}
+form >.input-wrap >textarea,input{
+    width: 80%;
+    padding: 5px;
+    margin-left: auto;
+    float: right;
+    outline: none;
+    border: .3px rgba(128, 128, 128, 0.509) solid;
+}
+
+form >.input-wrap >textarea{
+    resize: none;
+}
+form >.input-wrap >#message{
+    height: 200px;
+}
+form> .submit-btn{
+    width: 100px;
+    float: right;
+}
+
+form> .submit-btn-wrap{
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 50px;
+    max-width: 200px;
+    float: right;
+}
+
+ .mandatory-msg{
+    color: red;
+    font-size: 9pt;
+ }

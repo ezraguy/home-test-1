@@ -1,8 +1,7 @@
 
 
 
-function handleScroll(browser) {
-    console.log(browser);
+function handleScroll() {
     var sidePanel = document.getElementById('side-pan');
     if (document.documentElement.scrollTop >= 270)
         sidePanel.className = ' side-panel fixed ';
@@ -58,8 +57,7 @@ function init() {
     if (window.addEventListener)
         window.addEventListener("scroll", handleScroll);
     else {
-        if (window.attachEvent)
-            window.attachEvent("scroll", handleScroll);
+        window.attachEvent("onscroll", handleScroll);
     }
 }
 init();

@@ -1,12 +1,16 @@
 
 function addFixedClass() {
+    window.addEventListener('scroll', handleScroll);
+}
+
+function handleScroll() {
     var sidePanel = document.getElementById('side-pan');
-    window.body.addEventListener('scroll', function () {
-        if (pageYOffset >= 270)
-            sidePanel.className = ' side-panel fixed ';
-        else
-            sidePanel.className = ' side-panel '
-    })
+
+    if (pageYOffset >= 270)
+        sidePanel.className = ' side-panel fixed ';
+    else
+        sidePanel.className = ' side-panel '
+
 }
 
 
@@ -48,5 +52,5 @@ function validateForm(e) {
 }
 
 
-
-window.onload = addFixedClass();
+// IE8 support
+window.attachEvent('scroll', handleScroll());

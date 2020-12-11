@@ -52,3 +52,6 @@ function validateForm(e) {
         document.getElementById('success-msg').style.display = 'block'
 
 }
+
+// ie 8 support
+window.onload = addFixedClass();

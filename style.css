@@ -243,9 +243,9 @@ a:visited {
     font-weight: 300;
 }
     
-form{
+#form{
     width: 100%;
-   margin-bottom: 100px;
+   margin-bottom: 150px;
     min-height: 200px;
     padding-right: 10%;
     
@@ -300,6 +300,7 @@ form{
 #success-msg{
     margin-left: 50px;
     margin-top: 20px;
+    
     color: #33cc33;
     display: none;
 }

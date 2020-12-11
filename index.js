@@ -1,5 +1,12 @@
 
-
+function init() {
+    if (window.addEventListener)
+        window.addEventListener("scroll", handleScroll);
+    else {
+        // ie8 support
+        window.attachEvent("onscroll", handleScroll);
+    }
+}
 
 function handleScroll() {
     var sidePanel = document.getElementById('side-pan');
@@ -53,11 +60,5 @@ function validateForm() {
 
 }
 
-function init() {
-    if (window.addEventListener)
-        window.addEventListener("scroll", handleScroll);
-    else {
-        window.attachEvent("onscroll", handleScroll);
-    }
-}
+
 init();

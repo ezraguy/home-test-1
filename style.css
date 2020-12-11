@@ -197,7 +197,6 @@ a:visited {
     width: 100%; 
     position: relative;
     margin-bottom: 20px;
-  
 }
 
 
@@ -206,11 +205,9 @@ a:visited {
     min-height: 100px;
 }
 .download-now >.download-btn-wrap>.download-btn {
- 
-   min-height: 60px;
-    font-size: 25pt;
+    min-height: 60px;
+    font-size: 20pt;
     border-radius: 2px;
-    /* box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.742); */
     margin-bottom: 20px;
 }
 
@@ -297,10 +294,10 @@ a:visited {
     padding-top: 5px;
     margin-right: 20px;
     float: right;
-   
     color: #33cc33;
     display: none;
 }
+
 .empty-input{
     border: 1px red solid !important;
 }

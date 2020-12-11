@@ -21,7 +21,6 @@ function validateForm(e) {
         if (i === 3)
             continue
         var element = inputs[i];
-        console.log(element.type);
         if (element.value.length === 0) {
             element.className = 'empty-input';
             canSubmit = false;

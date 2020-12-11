@@ -40,8 +40,11 @@ function validateForm() {
         }
     }
 
-    if (textarea.value.length === 0)
+    if (textarea.value.length === 0) {
+
         textarea.className = 'empty-input ';
+        canSubmit = false;
+    }
     else
         textarea.className = '';
 

@@ -1,6 +1,6 @@
 
 function addFixedClass() {
-    const sidePanel = document.getElementById('side-pan');
+    var sidePanel = document.getElementById('side-pan');
     window.addEventListener('scroll', function () {
         if (pageYOffset >= 270)
             sidePanel.className = 'side-panel fixed ';
@@ -12,12 +12,12 @@ function addFixedClass() {
 
 function validateForm(e) {
     e.preventDefault();
-    const inputs = document.getElementById('form').elements;
-    const emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    const emailErrorMessage = document.getElementById('email-err-msg');
-    let canSubmit = true;
-    for (let i = 0; i < inputs.length; i++) {
-        const element = inputs[i];
+    var inputs = document.getElementById('form').elements;
+    var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    var emailErrorMessage = document.getElementById('email-err-msg');
+    var canSubmit = true;
+    for (var i = 0; i < inputs.length; i++) {
+        var element = inputs[i];
         if (element.value.length === 0) {
             element.className = 'empty-input';
             canSubmit = false;

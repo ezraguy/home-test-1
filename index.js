@@ -3,27 +3,31 @@ function addFixedClass() {
     var sidePanel = document.getElementById('side-pan');
     window.addEventListener('scroll', function () {
         if (pageYOffset >= 270)
-            sidePanel.className = 'side-panel fixed ';
+            sidePanel.className = ' side-panel fixed ';
         else
-            sidePanel.className = 'side-panel'
+            sidePanel.className = ' side-panel '
     })
 }
 
 
 function validateForm(e) {
     e.preventDefault();
+
     var inputs = document.getElementById('form').elements;
     var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     var emailErrorMessage = document.getElementById('email-err-msg');
     var canSubmit = true;
     for (var i = 0; i < inputs.length; i++) {
+        if (i === 3)
+            continue
         var element = inputs[i];
+        console.log(element.type);
         if (element.value.length === 0) {
             element.className = 'empty-input';
             canSubmit = false;
         }
         else
-            element.className = 'empty-input';
+            element.className = '';
 
         if (i === 1) {
 

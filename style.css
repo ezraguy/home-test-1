@@ -280,8 +280,9 @@ a:visited {
 #form >.input-wrap >#message{
     height: 200px;
 }
-#form> .submit-btn{
+#form> .submit-btn-wrap> .submit-btn{
     width: 100px;
+    margin-left: auto;
     float: right;
 }
 
@@ -289,13 +290,13 @@ a:visited {
     margin-top: 20px;
     width: 100%;
     margin-bottom: 50px;
-    max-width: 200px;
     float: right;
 }
 #success-msg{
-    margin-left: 50px;
-    margin-top: 20px;
-    
+    padding-top: 5px;
+    margin-right: 20px;
+    float: right;
+   
     color: #33cc33;
     display: none;
 }

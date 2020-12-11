@@ -176,6 +176,7 @@ body{
  .summary-title,.resolution-title {
     font-size: 16pt;
     font-weight: 300;
+    margin-bottom: 10px;
 }
 .content{
    margin-bottom: 20px;

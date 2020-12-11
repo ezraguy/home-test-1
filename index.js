@@ -1,10 +1,5 @@
 
-function addFixedClass() {
-    if (window.addEventListener)
-        window.addEventListener("scroll", handleScroll);
-    else
-        window.attachEvent("scroll", handleScroll);
-}
+
 
 function handleScroll() {
     var sidePanel = document.getElementById('side-pan');
@@ -18,7 +13,6 @@ function handleScroll() {
 
 function validateForm(e) {
     e.preventDefault();
-
     var inputs = document.getElementById('form').elements;
     var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     var emailErrorMessage = document.getElementById('email-err-msg');
@@ -54,4 +48,9 @@ function validateForm(e) {
 }
 
 // ie 8 support
-window.onload = addFixedClass();
+window.onload = new function () {
+    if (window.addEventListener)
+        window.addEventListener("scroll", handleScroll);
+    else
+        window.attachEvent("scroll", handleScroll);
+};

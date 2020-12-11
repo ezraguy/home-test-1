@@ -1,11 +1,12 @@
 
 function addFixedClass() {
     window.addEventListener('scroll', handleScroll);
+    window.attachEvent('scroll', handleScroll);
 }
 
 function handleScroll() {
-    var sidePanel = document.getElementById('side-pan');
 
+    var sidePanel = document.getElementById('side-pan');
     if (document.documentElement.scrollTop >= 270)
         sidePanel.className = ' side-panel fixed ';
     else
@@ -53,4 +54,4 @@ function validateForm(e) {
 
 
 // IE8 support
-window.attachEvent('scroll', handleScroll());
+window.onload(handleScroll());

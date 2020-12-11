@@ -1,6 +1,6 @@
 
 function addFixedClass() {
-    window.addEventListener('scroll', handleScroll);
+    // window.addEventListener('scroll', handleScroll);
     window.attachEvent('scroll', handleScroll);
 }
 
@@ -54,4 +54,5 @@ function validateForm(e) {
 
 
 // IE8 support
+
 window.onload(handleScroll());

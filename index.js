@@ -1,11 +1,9 @@
 
 function addFixedClass() {
-    // window.addEventListener('scroll', handleScroll);
-    window.attachEvent('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 }
 
 function handleScroll() {
-
     var sidePanel = document.getElementById('side-pan');
     if (document.documentElement.scrollTop >= 270)
         sidePanel.className = ' side-panel fixed ';

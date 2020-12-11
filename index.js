@@ -1,5 +1,5 @@
 
-const addFixedClass = () => {
+function addFixedClass() {
     const sidePanel = document.getElementById('side-pan');
     window.addEventListener('scroll', () => {
         if (pageYOffset >= 270)
@@ -10,7 +10,7 @@ const addFixedClass = () => {
 }
 
 
-const validateForm = (e) => {
+function validateForm(e) {
     e.preventDefault();
     const inputs = document.getElementById('form').elements;
     const emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;

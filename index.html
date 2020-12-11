@@ -110,19 +110,21 @@
             <div id="form"  >
                 <div class="input-wrap">
                     <label for="name">Name:<span class="must">*</span></label>
-                    
                     <input type="text" id="name" name="name" >
+                    <span id="empty-name" class="invalid-msg">This field cannot be empty</span>
                 </div>
                 <br>
                 <div class="input-wrap">
                     <label for="email">Email:<span class="must">*</span></label>
                     <input  id="email" name="email">
-                    <span id="email-err-msg" class="invalid-email">Please enter a valid email</span>
+                    <span id="email-err-msg" class="invalid-msg">Please enter a valid email</span>
+                    <span id="empty-email" class="invalid-msg">This field cannot be empty</span>
                 </div>
                 <br>
                 <div class="input-wrap">
                     <label for="message">Message:<span class="must">*</span></label>
                     <textarea id="message" name="message" ></textarea>
+                    <span id="empty-message" class="invalid-msg">This field cannot be empty</span>
                 </div>
                 <br>
                 

@@ -251,7 +251,7 @@ a:visited {
     height: 30px;
 }
 
-#form > .input-wrap > .invalid-email{
+#form > .input-wrap > .invalid-msg{
     font-size: 10pt;
     margin-left: 20%;
     display: none;

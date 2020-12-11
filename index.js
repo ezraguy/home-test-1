@@ -30,16 +30,21 @@ function validateForm() {
         if (element.value.length === 0) {
             element.className = ' empty-input ';
             canSubmit = false;
+            document.getElementById(`empty-${element.id}`).style.display = 'block';
         }
-        else
+        else {
             element.className = '';
+            document.getElementById(`empty-${element.id}`).style.display = 'none';
+        }
 
-        if (i === 1) {
+        if (i === 1 && element.value.length > 0) {
 
-            if (emailReg.test(element.value))
+            if (emailReg.test(element.value)) {
                 emailErrorMessage.style.display = 'none'
+            }
             else {
                 emailErrorMessage.style.display = 'block';
+                element.className = ' empty-input ';
                 canSubmit = false;
             }
 
@@ -48,12 +53,16 @@ function validateForm() {
     }
 
     if (textarea.value.length === 0) {
-
         textarea.className = 'empty-input ';
         canSubmit = false;
+        document.getElementById('empty-message').style.display = 'block';
     }
-    else
+    else {
+
         textarea.className = '';
+        document.getElementById('empty-message').style.display = 'none';
+
+    }
 
     if (canSubmit)
         document.getElementById('success-msg').style.display = 'block'

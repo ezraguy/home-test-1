@@ -27,7 +27,7 @@ function validateForm() {
 
     for (var i = 0; i < inputs.length; i++) {
         var element = inputs[i];
-        if (element.value.length === 0) {
+        if (element.value.trim().length === 0) {
             element.className = ' empty-input ';
             canSubmit = false;
             document.getElementById(`empty-${element.id}`).style.display = 'block';
@@ -52,7 +52,7 @@ function validateForm() {
         }
     }
 
-    if (textarea.value.length === 0) {
+    if (textarea.value.trim().length === 0) {
         textarea.className = 'empty-input ';
         canSubmit = false;
         document.getElementById('empty-message').style.display = 'block';
@@ -66,6 +66,8 @@ function validateForm() {
 
     if (canSubmit)
         document.getElementById('success-msg').style.display = 'block'
+    else
+        document.getElementById('success-msg').style.display = 'none'
 
 }
 

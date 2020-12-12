@@ -48,9 +48,9 @@ function validateForm() {
         if (i === 1) {
             if (value.length === 0) {
                 element.className = ' empty-input ';
+                emailErrorMessage.style.display = 'none'
                 canSubmit = false;
                 document.getElementById('empty-email').style.display = 'block';
-
             }
             else {
                 element.className = '';
@@ -71,13 +71,13 @@ function validateForm() {
 
     }
 
-    if (textarea.value.trim().length === 0) {
+    textarea.value = textarea.value.replace(/^\s+|\s+$/g, '');
+    if (textarea.value.length === 0) {
         textarea.className = 'empty-input ';
         canSubmit = false;
         document.getElementById('empty-message').style.display = 'block';
     }
     else {
-
         textarea.className = '';
         document.getElementById('empty-message').style.display = 'none';
 

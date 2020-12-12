@@ -28,15 +28,30 @@ function validateForm() {
     for (var i = 0; i < inputs.length; i++) {
         var element = inputs[i];
         if (element.value.trim().length === 0) {
-            element.className = ' empty-input ';
-            canSubmit = false;
-            document.getElementById(`empty-${element.id}`).style.display = 'block';
-        }
-        else {
-            element.className = '';
-            document.getElementById(`empty-${element.id}`).style.display = 'none';
-        }
 
+            if (i === 0) {
+                element.className = ' empty-input ';
+                canSubmit = false;
+                document.getElementById('empty-name').style.display = 'block';
+            }
+
+
+            else {
+                element.className = '';
+                document.getElementById(`empty-${element.id}`).style.display = 'none';
+            }
+
+            if (i === 1) {
+                element.className = ' empty-input ';
+                canSubmit = false;
+                document.getElementById('empty-name').style.display = 'block';
+            }
+            else {
+                element.className = '';
+                document.getElementById(`empty-email`).style.display = 'none';
+            }
+
+        }
         if (i === 1 && element.value.length > 0) {
 
             if (emailReg.test(element.value)) {

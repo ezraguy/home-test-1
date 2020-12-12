@@ -27,15 +27,15 @@ function validateForm() {
 
     for (var i = 0; i < inputs.length; i++) {
         var element = inputs[i];
-        var value = element.value.trim();
+        // using replace for ie8 support
+        var value = element.value.replace(/^\s+|\s+$/g, '');
 
 
         if (i === 0) {
-            if (value.trim().length === 0) {
+            if (value.length === 0) {
                 element.className = ' empty-input ';
                 canSubmit = false;
                 document.getElementById('empty-name').style.display = 'block';
-
             }
             else {
                 element.className = '';
@@ -46,7 +46,7 @@ function validateForm() {
 
 
         if (i === 1) {
-            if (value.trim().length === 0) {
+            if (value.length === 0) {
                 element.className = ' empty-input ';
                 canSubmit = false;
                 document.getElementById('empty-email').style.display = 'block';

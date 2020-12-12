@@ -27,44 +27,48 @@ function validateForm() {
 
     for (var i = 0; i < inputs.length; i++) {
         var element = inputs[i];
-        if (element.value.trim().length === 0) {
+        var value = element.value.trim();
 
-            if (i === 0) {
+
+        if (i === 0) {
+            if (value.trim().length === 0) {
                 element.className = ' empty-input ';
                 canSubmit = false;
                 document.getElementById('empty-name').style.display = 'block';
-            }
 
-
-            else {
-                element.className = '';
-                document.getElementById(`empty-${element.id}`).style.display = 'none';
-            }
-
-            if (i === 1) {
-                element.className = ' empty-input ';
-                canSubmit = false;
-                document.getElementById('empty-name').style.display = 'block';
             }
             else {
                 element.className = '';
-                document.getElementById(`empty-email`).style.display = 'none';
+                document.getElementById('empty-name').style.display = 'none';
             }
-
         }
-        if (i === 1 && element.value.length > 0) {
 
-            if (emailReg.test(element.value)) {
-                emailErrorMessage.style.display = 'none'
-            }
-            else {
-                emailErrorMessage.style.display = 'block';
+
+
+        if (i === 1) {
+            if (value.trim().length === 0) {
                 element.className = ' empty-input ';
                 canSubmit = false;
+                document.getElementById('empty-email').style.display = 'block';
+
             }
-
-
+            else {
+                element.className = '';
+                document.getElementById('empty-email').style.display = 'none';
+                if (emailReg.test(element.value)) {
+                    emailErrorMessage.style.display = 'none'
+                }
+                else {
+                    emailErrorMessage.style.display = 'block';
+                    element.className = ' empty-input ';
+                    canSubmit = false;
+                }
+            }
         }
+
+
+
+
     }
 
     if (textarea.value.trim().length === 0) {
